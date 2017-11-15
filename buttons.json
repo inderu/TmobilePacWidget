@@ -64,9 +64,7 @@
       ]
     }
   ,
-    "metaData": {
-
-    }
+    "metaData": null
   },
   {
     "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/1b.png\" width=\"100%\" height=\"100%\"></img>",
@@ -133,9 +131,7 @@
       ]
     }
   ,
-    "metaData": {
-
-    }
+    "metaData": null
   },
   {
     "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/2a.png\" width=\"100%\" height=\"100%\"></img>",
@@ -202,9 +198,7 @@
       ]
     }
   ,
-    "metaData": {
-
-    }
+    "metaData": null
   },
   {
     "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/2b.png\" width=\"100%\" height=\"100%\"></img>",
@@ -271,8 +265,6 @@
       ]
     }
   ,
-    "metaData": {
-
-    }
+    "metaData": null
   }
 ]
