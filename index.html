@@ -27,7 +27,7 @@
                 for(var i = 0; i < buttons.length; i++) {
                     var button = buttons[i];
                     clicks[i] = click.bind(this, i);
-                    $("#buttons").append('<button class=\"offer\" onclick=\"clicks[' + i +']()\" title=\"' + button.title + '\" style=\"width: 150px; height: 100px; cursor: pointer;\">' + button.html + '</button>');
+                    $("#buttons").append('<button class=\"offer\" onclick=\"clicks[' + i +']()\" title=\"' + button.title + '\" style=\"width: 150px; height: 100px; cursor: pointer; background-color: transparent; border: none;\">' + button.html + '</button>');
                 }
             }
         }
