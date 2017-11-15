@@ -1,19 +1,18 @@
 [
   {
-    "html": "<p>Test button 1</p>",
+    "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/1a.png\" width=\"25%\" height=\"25%\"></img>",
     "title": "offer1",
     "structuredContent": {
       "type": "vertical",
       "elements": [
         {
           "type": "image",
-          "url": "http://cdn.bgr.com/2016/08/iphone-8-concept.jpg",
+          "url": "https://inderu.github.io/TmobilePacWidget/img/1a.png",
           "tooltip": "image tooltip",
           "click": {
             "actions": [
               {
                 "type": "navigate",
-                "id": "98446950-2f54-4594-b89b-1d60a9fdda49",
                 "name": "Navigate to store via image",
                 "lo": 23423423,
                 "la": 2423423423
@@ -23,8 +22,8 @@
         },
         {
           "type": "text",
-          "text": "IPhone 8",
-          "tooltip": "brand new iphone 8",
+          "text": "Apple iPhone X",
+          "tooltip": "Apple iPhone X",
           "style": {
             "bold": true,
             "size": "large"
@@ -32,96 +31,39 @@
         },
         {
           "type": "text",
-          "text": "Now on sale!"
+          "text": "Pay in full Today - $1149.99",
+          "tooltip": "text tooltip",
+          "style": {
+            "bold": true,
+            "color":"#FA006B",
+            "size": "medium"
+          }
         },
         {
           "type": "text",
-          "text": "$155.99",
-          "tooltip": "155.99"
-        },
-        {
-          "type": "button",
-          "title": "Add to cart",
-          "click": {
-            "actions": [
-              {
-                "type": "link",
-                "id": "febf3237-f7d9-44bc-a17f-fc8abdfb0f25",
-                "name": "add to cart",
-                "uri": "http://www.google.com"
-              }
-            ]
-          }
-        },
-        {
-          "type": "horizontal",
-          "elements": [
-            {
-              "type": "button",
-              "title": "Buy",
-              "tooltip": "store is the thing",
-              "click": {
-                "actions": [
-                  {
-                    "type": "navigate",
-                    "id": "98446950-2f54-4594-b89b-1d60a9fdda49",
-                    "name": "Navigate to store",
-                    "lo": 23423423,
-                    "la": 2423423423
-                  }
-                ]
-              }
-            },
-            {
-              "type": "button",
-              "title": "Find",
-              "tooltip": "store is the thing",
-              "click": {
-                "actions": [
-                  {
-                    "type": "navigate",
-                    "id": "98446950-2f54-4594-b89b-1d60a9fdda49",
-                    "name": "Navigate to store",
-                    "lo": 23423423,
-                    "la": 2423423423
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "type": "button",
-          "title": "Navigate to store",
-          "tooltip": "store is the thing",
-          "click": {
-            "actions": [
-              {
-                "type": "navigate",
-                "id": "98446950-2f54-4594-b89b-1d60a9fdda49",
-                "name": "Navigate to store",
-                "lo": 23423423,
-                "la": 2423423423
-              }
-            ]
+          "text": "Finance from $429.99 ($30.00/mo*24mo)",
+          "tooltip": "text tooltip",
+          "style": {
+            "size": "small"
           }
         },
         {
           "type": "button",
-          "title": "More details",
+          "tooltip": "button tooltip",
+          "title": "Upgrade",
           "click": {
             "actions": [
               {
                 "type": "link",
-                "id": "15ffab70-de0e-42df-9576-290c2249aa24",
-                "uri": "http://www.google.com",
-                "name": "open browser"
+                "name": "Add to cart",
+                "uri": "https://example.com"
               }
             ]
           }
         }
       ]
-    },
+    }
+  ,
     "metaData": {
 
     }
