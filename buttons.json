@@ -31,7 +31,7 @@
         },
         {
           "type": "text",
-          "text": "Pay in full Today - $1149.99",
+          "text": "Pay in full Today - $999.99",
           "tooltip": "text tooltip",
           "style": {
             "bold": true,
@@ -41,7 +41,7 @@
         },
         {
           "type": "text",
-          "text": "Finance from $429.99 ($30.00/mo*24mo)",
+          "text": "Finance from $279.99 ($30.00/mo*24mo)",
           "tooltip": "text tooltip",
           "style": {
             "size": "small"
@@ -56,7 +56,7 @@
               {
                 "type": "link",
                 "name": "Add to cart",
-                "uri": "https://example.com"
+                "uri": "https://www.t-mobile.com/cell-phone/apple-iphone-x?color=spacegray&memory=64gb"
               }
             ]
           }
@@ -123,7 +123,7 @@
               {
                 "type": "link",
                 "name": "Add to cart",
-                "uri": "https://example.com"
+                "uri": "https://www.t-mobile.com/cell-phone/apple-iphone-x?color=spacegray&memory=256gb"
               }
             ]
           }
@@ -165,7 +165,7 @@
         },
         {
           "type": "text",
-          "text": "Pay in full Today - $1149.99",
+          "text": "Pay in full Today - $999.99",
           "tooltip": "text tooltip",
           "style": {
             "bold": true,
@@ -175,7 +175,7 @@
         },
         {
           "type": "text",
-          "text": "Finance from $429.99 ($30.00/mo*24mo)",
+          "text": "Finance from $279.99 ($30.00/mo*24mo)",
           "tooltip": "text tooltip",
           "style": {
             "size": "small"
@@ -190,7 +190,7 @@
               {
                 "type": "link",
                 "name": "Add to cart",
-                "uri": "https://example.com"
+                "uri": "https://www.t-mobile.com/cell-phone/apple-iphone-x?color=silver&memory=64gb"
               }
             ]
           }
@@ -257,7 +257,7 @@
               {
                 "type": "link",
                 "name": "Add to cart",
-                "uri": "https://example.com"
+                "uri": "https://www.t-mobile.com/cell-phone/apple-iphone-x?color=silver&memory=256gb"
               }
             ]
           }
