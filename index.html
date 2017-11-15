@@ -2,9 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>T-Mobile PAC Widget</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://lpcdn-a.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+    <script src="buttons.json"></script>
+    <script type="text/javascript">
+        var buttons;
+        var SDK = lpTag.agentSDK || {};
+        $(function() {
+            SDK.init({});
+            _loadButtons();
+        });
+
+        function _loadButtons() {
+            $.getJSON("buttons.json", function(json) {
+                buttons = json;
+                _displayButtons();
+            });
+        }
+
+        function _displayButtons() {
+            if (buttons) {
+                for(var i = 0; i < buttons.length; i++) {
+                    var button = buttons[i];
+                    $("#buttons").append('<button class=\"offer\" onclick=\"click(' + i +')\" title=\"' + button.title + '\">' + button.html + '</button>');
+                }
+            }
+        }
+
+        function click(index) {
+            if (buttons && buttons.length > index) {
+                var data = buttons[index];
+                if (data && data.structuredContent) {
+                    _sendStructuredContent(data.structuredContent, data.metaData);
+                }
+            }
+        }
+
+        function _sendStructuredContent(sc, md) {
+            var cmdName = lpTag.agentSDK.cmdNames.writeSC;
+            var data = {
+                json: sc,
+                metadata: md
+            };
+
+            SDK.command(cmdName, data, function (err) {
+                if (err) {
+                    _log('There was a problem sending the structured content! error message: ' + err);
+                } else {
+                    _log('');
+                }
+            });
+        }
+
+        function _log(text){
+            var area = $("#log");
+            area.text(text);
+        }
+    </script>
 </head>
 <body>
     <h1>Test!</h1>
+    <div id="buttons"></div>
+    <div id="log"></div>
 </body>
 </html>
