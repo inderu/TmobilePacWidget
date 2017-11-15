@@ -8,6 +8,7 @@
     <script src="buttons.json"></script>
     <script type="text/javascript">
         var buttons;
+        var clicks = {};
         var SDK = lpTag.agentSDK || {};
         $(function() {
             SDK.init({});
@@ -25,7 +26,8 @@
             if (buttons) {
                 for(var i = 0; i < buttons.length; i++) {
                     var button = buttons[i];
-                    $("#buttons").append('<button class=\"offer\" onclick=\"click(' + i +')\" title=\"' + button.title + '\">' + button.html + '</button>');
+                    clicks[i] = click.bind(this, i);
+                    $("#buttons").append('<button class=\"offer\" onclick=\"clicks[' + i +']()\" title=\"' + button.title + '\">' + button.html + '</button>');
                 }
             }
         }
