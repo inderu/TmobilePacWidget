@@ -30,8 +30,8 @@ function _displaySection(index) {
         $("#closedSection" + index).append('<div class=\"titleContainer\" id=\"closedTitle' + index + '\" onclick=\"sectionClicks[' + index +']()\"></div>');
         $("#closedTitle" + index).append('<span class=\"sectionTitle\">' + section.title + '</span>');
         $("#closedTitle" + index).append('<span class=\"sectionArrow down\"></span>');
-        $("#section" + index).append('<div class=\"openSection\" id=\"openSection' + index + '\" onclick=\"sectionClicks[' + index +']()\"></div>');
-        $("#openSection" + index).append('<div class=\"titleContainer\" id=\"openTitle' + index + '\"></div>');
+        $("#section" + index).append('<div class=\"openSection\" id=\"openSection' + index + '\""></div>');
+        $("#openSection" + index).append('<div class=\"titleContainer\" id=\"openTitle' + index + '\" onclick=\"sectionClicks[' + index +']()\"></div>');
         $("#openTitle" + index).append('<span class=\"sectionTitle\">' + section.title + '</span>');
         $("#openTitle" + index).append('<span class=\"sectionArrow up\"></span>');
         $("#openSection" + index).append('<div class=\"sectionContainer\" id=\"sectionContainer' + index + '\"></div>');
