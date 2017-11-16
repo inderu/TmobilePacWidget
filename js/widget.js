@@ -38,7 +38,7 @@ function _displaySection(index) {
         if (section.innerTitle) {
             $("#sectionContainer" + index).append(section.innerTitle);
         }
-        $("#sectionContainer" + index).append('<div class=\"sectionContent\" id=\"sectionContent' + index + '\" style=\"margin-top: 10px; margin-bottom: 10px;\"></div>');
+        $("#sectionContainer" + index).append('<div class=\"sectionContent\" id=\"sectionContent' + index + '\"></div>');
         if (section.type === 'buttons') {
             buttons = section.buttons;
             _displayButtons(index);
@@ -69,7 +69,7 @@ function _displayButtons(section) {
         for(var i = 0; i < buttons.length; i++) {
             var button = buttons[i];
             buttonClicks[i] = _buttonClick.bind(this, i);
-            $("#sectionContent" + section).append('<button class=\"offer\" onclick=\"buttonClicks[' + i +']()\" title=\"' + button.title + '\" style=\"width: 290px; height: 200px; cursor: pointer; background-color: transparent; border: none; margin-top: 20px;\">' + button.html + '</button>');
+            $("#sectionContent" + section).append('<button class=\"button\" onclick=\"buttonClicks[' + i +']()\" title=\"' + button.title + '\">' + button.html + '</button>');
         }
     }
 }

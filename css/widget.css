@@ -34,3 +34,15 @@
 .section.open .closedSection {
     display: none;
 }
+
+.sectionContent {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin-top: 20px;
+}
