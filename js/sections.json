@@ -288,7 +288,7 @@
             {
               "type": "button",
               "tooltip": "get directions",
-              "title": "Get directions for the nearest T-mobile store",
+              "title": "Directions to T-mobile store",
               "click": {
                 "actions": [
                   {
