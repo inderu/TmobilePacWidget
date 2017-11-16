@@ -29,11 +29,11 @@ function _displaySection(index) {
         $("#section" + index).append('<div class=\"closedSection\" id=\"closedSection' + index + '\"></div>');
         $("#closedSection" + index).append('<div class=\"titleContainer\" id=\"closedTitle' + index + '\" onclick=\"sectionClicks[' + index +']()\"></div>');
         $("#closedTitle" + index).append('<span class=\"sectionTitle\">' + section.title + '</span>');
-        $("#closedTitle" + index).append('<span class=\"sectionArrow\">\u25BC</span>');
+        $("#closedTitle" + index).append('<span class=\"sectionArrow down\"></span>');
         $("#section" + index).append('<div class=\"openSection\" id=\"openSection' + index + '\" onclick=\"sectionClicks[' + index +']()\"></div>');
         $("#openSection" + index).append('<div class=\"titleContainer\" id=\"openTitle' + index + '\"></div>');
         $("#openTitle" + index).append('<span class=\"sectionTitle\">' + section.title + '</span>');
-        $("#openTitle" + index).append('<span class=\"sectionArrow\">\u25B2</span>');
+        $("#openTitle" + index).append('<span class=\"sectionArrow up\"></span>');
         $("#openSection" + index).append('<div class=\"sectionContainer\" id=\"sectionContainer' + index + '\"></div>');
         if (section.innerTitle) {
             $("#sectionContainer" + index).append(section.innerTitle);

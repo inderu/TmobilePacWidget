@@ -19,6 +19,17 @@
 .sectionArrow {
     float: right;
     margin: 5px;
+    width: 12px;
+    height: 12px;
+    background: url(../img/12x12-sprite.png) 0 0 no-repeat;
+}
+
+.sectionArrow.up {
+    background-position: -460px 0;
+}
+
+.sectionArrow.down {
+    background-position: -480px 0;
 }
 
 .openSection {
