@@ -269,5 +269,40 @@
         "metaData": null
       }
     ]
+  },
+  {
+    "type": "buttons",
+    "title": "Navigation",
+    "innerTitle": "",
+    "buttons": [
+      {
+        "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/map.png\" width=\"100%\" height=\"100%\"></img>",
+        "title": "Send link to locate nearest T-Mobile Store",
+        "structuredContent": {
+          "type": "vertical",
+          "elements": [
+            {
+              "type": "image",
+              "url": "https://inderu.github.io/TmobilePacWidget/img/map_crop.png"
+            },
+            {
+              "type": "button",
+              "tooltip": "get directions",
+              "title": "Get directions for the nearest T-mobile store",
+              "click": {
+                "actions": [
+                  {
+                    "type": "link",
+                    "name": "Navigate to store via image",
+                    "uri" : "https://www.google.com/maps/search/t-mobile+new+york/"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "metaData": null
+      }
+    ]
   }
 ]
