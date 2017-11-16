@@ -1,25 +1,27 @@
 .closedSection {
-    background-color: lightgray;
     clear: left;
     display: block;
 }
 
 .titleContainer {
+    background-color: lightgray;
+    margin-top: 10px;
     left: 0px;
     width: 100%;
-    height: 20px;
+    height: 25px;
 }
 
 .sectionTitle {
     float: left;
+    margin: 5px;
 }
 
 .sectionArrow {
     float: right;
+    margin: 5px;
 }
 
 .openSection {
-    background-color: lightgray;
     display: none;
 }
 
