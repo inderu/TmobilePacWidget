@@ -27,11 +27,11 @@ function _displaySection(index) {
         sectionClicks[index] = _sectionClick.bind(this, index);
         $("#sections").append('<div class=\"section\" id=\"section' + index + '\"></div>');
         $("#section" + index).append('<div class=\"closedSection\" id=\"closedSection' + index + '\"></div>');
-        $("#closedSection" + index).append('<div class=\"closedTitle\" id=\"closedTitle' + index + '\" onclick=\"sectionClicks[' + index +']()\"></div>');
+        $("#closedSection" + index).append('<div class=\"titleContainer\" id=\"closedTitle' + index + '\" onclick=\"sectionClicks[' + index +']()\"></div>');
         $("#closedTitle" + index).append('<span class=\"sectionTitle\">' + section.title + '</span>');
         $("#closedTitle" + index).append('<span class=\"sectionArrow\">\u25B2</span>');
         $("#section" + index).append('<div class=\"openSection\" id=\"openSection' + index + '\" onclick=\"sectionClicks[' + index +']()\"></div>');
-        $("#openSection" + index).append('<div class=\"openTitle\" id=\"openTitle' + index + '\"></div>');
+        $("#openSection" + index).append('<div class=\"titleContainer\" id=\"openTitle' + index + '\"></div>');
         $("#openTitle" + index).append('<span class=\"sectionTitle\">' + section.title + '</span>');
         $("#openTitle" + index).append('<span class=\"sectionArrow\">\u25BC</span>');
         $("#openSection" + index).append('<div class=\"sectionContainer\" id=\"sectionContainer' + index + '\"></div>');
@@ -51,7 +51,7 @@ function _sectionClick(index) {
     if (sections && sections.length > index) {
         var section = sections[index];
         if (section) {
-            section.isOpen = !!section.isOpen;
+            section.isOpen = !section.isOpen;
             _setSectionVisibility(index);
         }
     }
