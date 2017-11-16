@@ -2,8 +2,9 @@
  * Created by danielg on 11/16/17.
  */
 var sections;
+var sectionClicks = {};
 var buttons;
-var clicks = {};
+var buttonClicks = {};
 var SDK = lpTag.agentSDK || {};
 $(function() {
     SDK.init({});
@@ -22,9 +23,17 @@ function _loadSections() {
 function _displaySection(index) {
     var section = sections[index];
     if (section) {
-        $("#sections").append('<div class=\"closedSection\" id=\"closedSection' + index + '\" style=\"display: none;\"></div>');
-        $("#sections").append('<div class=\"openSection\" id=\"openSection' + index + '\"></div>');
-        $("#openSection" + index).append('<div class=\"sectionTitle\" id=\"sectionTitle' + index + '\">' + section.title + '</div>');
+        section.isOpen = index === 0;
+        sectionClicks[index] = _sectionClick.bind(this, index);
+        $("#sections").append('<div class=\"section\" id=\"section' + index + '\"></div>');
+        $("#section" + index).append('<div class=\"closedSection\" id=\"closedSection' + index + '\"></div>');
+        $("#closedSection" + index).append('<div class=\"closedTitle\" id=\"closedTitle' + index + '\" onclick=\"sectionClicks[' + index +']()\"></div>');
+        $("#closedTitle" + index).append('<span class=\"sectionTitle\">' + section.title + '</span>');
+        $("#closedTitle" + index).append('<span class=\"sectionArrow\">\u25B2</span>');
+        $("#section" + index).append('<div class=\"openSection\" id=\"openSection' + index + '\" onclick=\"sectionClicks[' + index +']()\"></div>');
+        $("#openSection" + index).append('<div class=\"openTitle\" id=\"openTitle' + index + '\"></div>');
+        $("#openTitle" + index).append('<span class=\"sectionTitle\">' + section.title + '</span>');
+        $("#openTitle" + index).append('<span class=\"sectionArrow\">\u25BC</span>');
         $("#openSection" + index).append('<div class=\"sectionContainer\" id=\"sectionContainer' + index + '\"></div>');
         if (section.innerTitle) {
             $("#sectionContainer" + index).append(section.innerTitle);
@@ -34,6 +43,24 @@ function _displaySection(index) {
             buttons = section.buttons;
             _displayButtons(index);
         }
+        _setSectionVisibility(index);
+    }
+}
+
+function _sectionClick(index) {
+    if (sections && sections.length > index) {
+        var section = sections[index];
+        if (section) {
+            section.isOpen = !!section.isOpen;
+            _setSectionVisibility(index);
+        }
+    }
+}
+
+function _setSectionVisibility(index) {
+    $('#section' + index).removeClass('open');
+    if (sections[index].isOpen) {
+        $('#section' + index).addClass('open');
     }
 }
 
@@ -41,13 +68,13 @@ function _displayButtons(section) {
     if (buttons) {
         for(var i = 0; i < buttons.length; i++) {
             var button = buttons[i];
-            clicks[i] = click.bind(this, i);
-            $("#sectionContent" + section).append('<button class=\"offer\" onclick=\"clicks[' + i +']()\" title=\"' + button.title + '\" style=\"width: 290px; height: 200px; cursor: pointer; background-color: transparent; border: none; margin-top: 20px;\">' + button.html + '</button>');
+            buttonClicks[i] = _buttonClick.bind(this, i);
+            $("#sectionContent" + section).append('<button class=\"offer\" onclick=\"buttonClicks[' + i +']()\" title=\"' + button.title + '\" style=\"width: 290px; height: 200px; cursor: pointer; background-color: transparent; border: none; margin-top: 20px;\">' + button.html + '</button>');
         }
     }
 }
 
-function click(index) {
+function _buttonClick(index) {
     if (buttons && buttons.length > index) {
         var data = buttons[index];
         if (data && data.structuredContent) {
