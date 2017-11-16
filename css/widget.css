@@ -8,25 +8,18 @@
     left: 0px;
     width: 100%;
     height: 20px;
-    clear: left;
 }
 
 .sectionTitle {
     float: left;
-    /*left: 5px;*/
-    /*padding: 5px;*/
-    /*position: relative;*/
 }
 
 .sectionArrow {
     float: right;
-    /*right: 5px;*/
-    /*position: relative;*/
 }
 
 .openSection {
     background-color: lightgray;
-    clear: left;
     display: none;
 }
 
