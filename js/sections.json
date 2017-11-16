@@ -5,7 +5,7 @@
     "innerTitle": "<h2 style=\"text-align: center\">iPhone X offers</h2>",
     "buttons": [
       {
-        "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/1a-b.png\" width=\"280\" height=\"248\"></img>",
+        "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/1a-b.png\" width=\"275\" height=\"243\"></img>",
         "title": "Space Gray - 64Gb",
         "structuredContent": {
           "type": "vertical",
@@ -71,7 +71,7 @@
         "metaData": null
       },
       {
-        "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/1b-b.png\" width=\"280\" height=\"248\"></img>",
+        "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/1b-b.png\" width=\"275\" height=\"243\"></img>",
         "title": "Space Gray - 256Gb",
         "structuredContent": {
           "type": "vertical",
@@ -137,7 +137,7 @@
         "metaData": null
       },
       {
-        "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/2a-b.png\" width=\"280\" height=\"248\"></img>",
+        "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/2a-b.png\" width=\"275\" height=\"243\"></img>",
         "title": "Silver - 64Gb",
         "structuredContent": {
           "type": "vertical",
@@ -203,7 +203,7 @@
         "metaData": null
       },
       {
-        "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/2b-b.png\" width=\"280\" height=\"248\"></img>",
+        "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/2b-b.png\" width=\"275\" height=\"243\"></img>",
         "title": "Silver - 256Gb",
         "structuredContent": {
           "type": "vertical",
@@ -276,7 +276,7 @@
     "innerTitle": "",
     "buttons": [
       {
-        "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/map.png\" width=\"280\" height=\"248\"></img>",
+        "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/map.png\" width=\"275\" height=\"243\"></img>",
         "title": "Send link to locate nearest T-Mobile Store",
         "structuredContent": {
           "type": "vertical",
