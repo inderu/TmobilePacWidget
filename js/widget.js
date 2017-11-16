@@ -3,8 +3,6 @@
  */
 var sections;
 var sectionClicks = {};
-var buttons;
-var buttonClicks = {};
 var SDK = lpTag.agentSDK || {};
 $(function() {
     SDK.init({});
@@ -65,20 +63,29 @@ function _setSectionVisibility(index) {
 }
 
 function _displayButtons(section) {
-    if (buttons) {
-        for(var i = 0; i < buttons.length; i++) {
-            var button = buttons[i];
-            buttonClicks[i] = _buttonClick.bind(this, i);
-            $("#sectionContent" + section).append('<button class=\"button\" onclick=\"buttonClicks[' + i +']()\" title=\"' + button.title + '\">' + button.html + '</button>');
+    if (sections && sections.length > section) {
+        var buttons = sections[section].buttons;
+        if (!sections[section].buttonClicks) {
+            sections[section].buttonClicks = {};
+        }
+        if (buttons) {
+            for (var i = 0; i < buttons.length; i++) {
+                var button = buttons[i];
+                sections[section].buttonClicks[i] = _buttonClick.bind(this, section, i);
+                $("#sectionContent" + section).append('<button class=\"button\" onclick=\"sections[' + section + ']buttonClicks[' + i + ']()\" title=\"' + button.title + '\">' + button.html + '</button>');
+            }
         }
     }
 }
 
-function _buttonClick(index) {
-    if (buttons && buttons.length > index) {
-        var data = buttons[index];
-        if (data && data.structuredContent) {
-            _sendStructuredContent(data.structuredContent, data.metaData);
+function _buttonClick(section, button) {
+    if (sections && sections.length > section) {
+        var buttons = sections[section].buttons;
+        if (buttons && buttons.length > button) {
+            var data = buttons[button];
+            if (data && data.structuredContent) {
+                _sendStructuredContent(data.structuredContent, data.metaData);
+            }
         }
     }
 }
