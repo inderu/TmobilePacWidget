@@ -1,0 +1,11 @@
+.closedSection {
+    background-color: lightgray;
+}
+
+.openSection {
+    background-color: lightgray;
+}
+
+.openSection .sectionContainer {
+    background-color: white;
+}
