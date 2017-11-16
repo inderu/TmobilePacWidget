@@ -14,6 +14,8 @@
 .sectionTitle {
     float: left;
     margin: 5px;
+    font-weight: bold;
+    color: #767678;
 }
 
 .sectionArrow {
