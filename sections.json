@@ -1,0 +1,273 @@
+[
+  {
+    "type": "buttons",
+    "title": "",
+    "innerTitle": "<h2 style=\"text-align: center\">iPhone X offers</h2>",
+    "buttons": [
+      {
+        "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/1a-b.png\" width=\"100%\" height=\"100%\"></img>",
+        "title": "offer1",
+        "structuredContent": {
+          "type": "vertical",
+          "elements": [
+            {
+              "type": "image",
+              "url": "https://inderu.github.io/TmobilePacWidget/img/1a.png",
+              "tooltip": "image tooltip",
+              "click": {
+                "actions": [
+                  {
+                    "type": "navigate",
+                    "name": "Navigate to store via image",
+                    "lo": 23423423,
+                    "la": 2423423423
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "text": "Apple iPhone X",
+              "tooltip": "Apple iPhone X",
+              "style": {
+                "bold": true,
+                "size": "large"
+              }
+            },
+            {
+              "type": "text",
+              "text": "Pay in full Today - $999.99",
+              "tooltip": "text tooltip",
+              "style": {
+                "bold": true,
+                "color": "#FA006B",
+                "size": "medium"
+              }
+            },
+            {
+              "type": "text",
+              "text": "Finance from $279.99 ($30.00/mo*24mo)",
+              "tooltip": "text tooltip",
+              "style": {
+                "size": "small"
+              }
+            },
+            {
+              "type": "button",
+              "tooltip": "button tooltip",
+              "title": "Upgrade",
+              "click": {
+                "actions": [
+                  {
+                    "type": "link",
+                    "name": "Add to cart",
+                    "uri": "https://www.t-mobile.com/cell-phone/apple-iphone-x?color=spacegray&memory=64gb"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "metaData": null
+      },
+      {
+        "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/1b-b.png\" width=\"100%\" height=\"100%\"></img>",
+        "title": "offer2",
+        "structuredContent": {
+          "type": "vertical",
+          "elements": [
+            {
+              "type": "image",
+              "url": "https://inderu.github.io/TmobilePacWidget/img/1b.png",
+              "tooltip": "image tooltip",
+              "click": {
+                "actions": [
+                  {
+                    "type": "navigate",
+                    "name": "Navigate to store via image",
+                    "lo": 23423423,
+                    "la": 2423423423
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "text": "Apple iPhone X",
+              "tooltip": "Apple iPhone X",
+              "style": {
+                "bold": true,
+                "size": "large"
+              }
+            },
+            {
+              "type": "text",
+              "text": "Pay in full Today - $1149.99",
+              "tooltip": "text tooltip",
+              "style": {
+                "bold": true,
+                "color": "#FA006B",
+                "size": "medium"
+              }
+            },
+            {
+              "type": "text",
+              "text": "Finance from $429.99 ($30.00/mo*24mo)",
+              "tooltip": "text tooltip",
+              "style": {
+                "size": "small"
+              }
+            },
+            {
+              "type": "button",
+              "tooltip": "button tooltip",
+              "title": "Upgrade",
+              "click": {
+                "actions": [
+                  {
+                    "type": "link",
+                    "name": "Add to cart",
+                    "uri": "https://www.t-mobile.com/cell-phone/apple-iphone-x?color=spacegray&memory=256gb"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "metaData": null
+      },
+      {
+        "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/2a-b.png\" width=\"100%\" height=\"100%\"></img>",
+        "title": "offer3",
+        "structuredContent": {
+          "type": "vertical",
+          "elements": [
+            {
+              "type": "image",
+              "url": "https://inderu.github.io/TmobilePacWidget/img/2a.png",
+              "tooltip": "image tooltip",
+              "click": {
+                "actions": [
+                  {
+                    "type": "navigate",
+                    "name": "Navigate to store via image",
+                    "lo": 23423423,
+                    "la": 2423423423
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "text": "Apple iPhone X",
+              "tooltip": "Apple iPhone X",
+              "style": {
+                "bold": true,
+                "size": "large"
+              }
+            },
+            {
+              "type": "text",
+              "text": "Pay in full Today - $999.99",
+              "tooltip": "text tooltip",
+              "style": {
+                "bold": true,
+                "color": "#FA006B",
+                "size": "medium"
+              }
+            },
+            {
+              "type": "text",
+              "text": "Finance from $279.99 ($30.00/mo*24mo)",
+              "tooltip": "text tooltip",
+              "style": {
+                "size": "small"
+              }
+            },
+            {
+              "type": "button",
+              "tooltip": "button tooltip",
+              "title": "Upgrade",
+              "click": {
+                "actions": [
+                  {
+                    "type": "link",
+                    "name": "Add to cart",
+                    "uri": "https://www.t-mobile.com/cell-phone/apple-iphone-x?color=silver&memory=64gb"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "metaData": null
+      },
+      {
+        "html": "<img src=\"https://inderu.github.io/TmobilePacWidget/img/2b-b.png\" width=\"100%\" height=\"100%\"></img>",
+        "title": "offer4",
+        "structuredContent": {
+          "type": "vertical",
+          "elements": [
+            {
+              "type": "image",
+              "url": "https://inderu.github.io/TmobilePacWidget/img/2b.png",
+              "tooltip": "image tooltip",
+              "click": {
+                "actions": [
+                  {
+                    "type": "navigate",
+                    "name": "Navigate to store via image",
+                    "lo": 23423423,
+                    "la": 2423423423
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "text": "Apple iPhone X",
+              "tooltip": "Apple iPhone X",
+              "style": {
+                "bold": true,
+                "size": "large"
+              }
+            },
+            {
+              "type": "text",
+              "text": "Pay in full Today - $1149.99",
+              "tooltip": "text tooltip",
+              "style": {
+                "bold": true,
+                "color": "#FA006B",
+                "size": "medium"
+              }
+            },
+            {
+              "type": "text",
+              "text": "Finance from $429.99 ($30.00/mo*24mo)",
+              "tooltip": "text tooltip",
+              "style": {
+                "size": "small"
+              }
+            },
+            {
+              "type": "button",
+              "tooltip": "button tooltip",
+              "title": "Upgrade",
+              "click": {
+                "actions": [
+                  {
+                    "type": "link",
+                    "name": "Add to cart",
+                    "uri": "https://www.t-mobile.com/cell-phone/apple-iphone-x?color=silver&memory=256gb"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "metaData": null
+      }
+    ]
+  }
+]

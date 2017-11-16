@@ -5,29 +5,48 @@
     <title>T-Mobile PAC Widget</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
-    <script src="buttons.json"></script>
+    <script src="sections.json"></script>
     <script type="text/javascript">
+        var sections;
         var buttons;
         var clicks = {};
         var SDK = lpTag.agentSDK || {};
         $(function() {
             SDK.init({});
-            _loadButtons();
+            _loadSections();
         });
 
-        function _loadButtons() {
-            $.getJSON("buttons.json", function(json) {
-                buttons = json;
-                _displayButtons();
+        function _loadSections() {
+            $.getJSON("sections.json", function(json) {
+                sections = json;
+                for (var i = 0; i < sections.length; i++) {
+                    _displaySection(i);
+                }
             });
         }
 
-        function _displayButtons() {
+        function _displaySection(index) {
+            var section = sections[index];
+            if (section) {
+                $("#sections").append('<div class=\"closedSection\" id=\"closedSection' + index + '\" style=\"display: none;\"></div>');
+                $("#sections").append('<div class=\"openSection\" id=\"openSection' + index + '\"></div>');
+                if (section.innerTitle) {
+                    $("#openSection" + index).append(section.innerTitle);
+                }
+                $("#openSection" + index).append('<div class=\"sectionContent\" id=\"sectionContent' + index + '\" style=\"margin-top: 10px; margin-bottom: 10px;\"></div>');
+                if (section.type === 'buttons') {
+                    buttons = section.buttons;
+                    _displayButtons(index);
+                }
+            }
+        }
+
+        function _displayButtons(section) {
             if (buttons) {
                 for(var i = 0; i < buttons.length; i++) {
                     var button = buttons[i];
                     clicks[i] = click.bind(this, i);
-                    $("#buttons").append('<button class=\"offer\" onclick=\"clicks[' + i +']()\" title=\"' + button.title + '\" style=\"width: 290px; height: 200px; cursor: pointer; background-color: transparent; border: none; margin-top: 20px;\">' + button.html + '</button>');
+                    $("#sectionContent" + section).append('<button class=\"offer\" onclick=\"clicks[' + i +']()\" title=\"' + button.title + '\" style=\"width: 290px; height: 200px; cursor: pointer; background-color: transparent; border: none; margin-top: 20px;\">' + button.html + '</button>');
                 }
             }
         }
@@ -64,8 +83,7 @@
     </script>
 </head>
 <body>
-    <h2 style="text-align: center">iPhone X offers</h2>
-    <div id="buttons" style="margin-top: 10px; margin-bottom: 10px; align-content: center; justify-content: center"></div>
+    <div id="sections"></div>
     <div id="log"></div>
 </body>
 </html>
