@@ -72,7 +72,7 @@ function _displayButtons(section) {
             for (var i = 0; i < buttons.length; i++) {
                 var button = buttons[i];
                 sections[section].buttonClicks[i] = _buttonClick.bind(this, section, i);
-                $("#sectionContent" + section).append('<button class=\"button\" onclick=\"sections[' + section + ']buttonClicks[' + i + ']()\" title=\"' + button.title + '\">' + button.html + '</button>');
+                $("#sectionContent" + section).append('<button class=\"button\" onclick=\"sections[' + section + '].buttonClicks[' + i + ']()\" title=\"' + button.title + '\">' + button.html + '</button>');
             }
         }
     }
